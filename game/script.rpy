@@ -5,12 +5,13 @@
 define a = Character("Akuno")
 define o = Character("Okasuki")
 define m = Character("MC")
-image bg walledvalley = "images/walledvalley.png"
-image bg ocean = "images/ocean.png"
+image bg walledvalley = im.Scale("images/walledvalley.png", 1920, 1080)
+image bg ocean = im.Scale("images/ocean.png", 1920, 1080)
 image wolf happy = "images/wolf.png"
 image adahm = "images/sadahm.png"
-image bg spooky forest = "images/spookyforest.png"
-image bg camp1 = "images/camp1.png"
+image bg spooky forest = im.Scale("images/spookyforest.jpg", 1920, 1080)
+image bg camp1 = im.Scale("images/camp.jpg", 1920, 1080)
+image bg office = im.Scale("images/office.jpg", 1920, 1080)
 # The game starts here.
 
 label start:
@@ -19,11 +20,11 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene camp1
+    scene bg camp1
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
-    play music "deep jam.ogg"
+    play music "tenpenny.ogg"
 
     # These display lines of dialogue.
     "What a waste of time."
@@ -37,6 +38,8 @@ label start:
     m "I guess. Let's just get this over with..."
     hide adahm
     "We step through the gate and onto the forest path."
+    stop music
+    play sound "night forest.ogg"
     scene bg spooky forest
     # switch to spooky forest here
     "It twists and winds through the shadowy woods and dead leaves crunch under our feet"
@@ -171,5 +174,5 @@ label OkasukiForest:
 label camp2:
 
     scene camp1
-
-    "I am afraid"
+    stop sound
+    "this is as far as i've gotten"
