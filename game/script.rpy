@@ -33,6 +33,7 @@ label start:
     "But they set up some stupid 'Test of Courage' in the woods for our last night here."
     "We all got to choose our partners, so of course I went with my childhood best friend, Akuno."
     show adahm
+    show okatsuki happy at right
     m "I'm pretty sure everyone here thinks this is stupid and childish."
     a "They probably do, but who knows. It could be fun."
     m "I guess. Let's just get this over with..."
